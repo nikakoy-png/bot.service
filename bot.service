@@ -1,0 +1,15 @@
+[Unit]
+Description=Telegram bot 'counter'
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/FINAL_BOT__
+ExecStart=/root/bin/python3 /root/FINAL_BOT__/main.py
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
